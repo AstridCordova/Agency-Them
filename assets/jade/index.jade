@@ -1,0 +1,25 @@
+doctype
+html
+	head
+		title Agency Theme
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Montserrat', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Kaushan+Script', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Droid+Serif:700italic,400italic,400,700', type='text/css')
+		link(rel="stylesheet",href="assets/css/bootstrap.css")
+		link(rel="stylesheet",href="assets/font-awesome/css/font-awesome.min.css")
+		link(rel="stylesheet",href="assets/sass/main.css")
+	body
+		include _mixin.jade
+		include _variable.jade
+		include secciones/header.jade
+		include secciones/services.jade
+		include secciones/portfolio.jade
+		include secciones/about.jade
+		include secciones/team.jade
+		include secciones/logos.jade
+		include secciones/contact.jade
+		include secciones/footer.jade
+	script(type="text/javascript", src="assets/js/jquery.min.js")
+	script(type="text/javascript", src="assets/js/bootstrap.min.js")

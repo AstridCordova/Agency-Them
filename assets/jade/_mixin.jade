@@ -1,0 +1,90 @@
+mixin encabezado(titulo, subtitulo)
+    h2= titulo
+    p.subtitulo= parraforesumido
+
+mixin icon(call)
+   case call
+       when 'first'
+           i.fa.fa-shopping-cart
+       when 'second'
+           i.fa.fa-laptop
+       when 'third'
+           i.fa.fa-lock
+mixin single-service(call, servicetittle)
+  .col-md-4
+    .servicio
+      +icon(call)
+      h4= servicetittle
+      p= parrafo
+
+mixin imagen(call)
+   case call
+       when 'uno'
+           img(src="img/portfolio/roundicons.png")
+       when 'dos'
+           img(src="img/portfolio/startup-framework.png")
+       when 'tres'
+           img(src="img/portfolio/treehouse.png")
+       when 'cuatro'
+           img(src="img/portfolio/golden.png")
+       when 'cinco'
+           img(src="img/portfolio/escape.png")
+       when 'seis'
+           img(src="img/portfolio/dreams.png")
+mixin single-portfolio(call, portfoliotittle, descripcion)
+   .col-md-4
+      .single-portfolio
+         +imagen(call)
+         h4= portfoliotittle
+         p= descripcion
+
+mixin photo(call)
+   case call
+       when 'uno'
+           img(src="img/team/1.jpg")
+       when 'dos'
+           img(src="img/team/2.jpg")
+       when 'tres'
+           img(src="img/team/3.jpg")
+mixin single-team(call, nombre, ocupacion)
+   .col-md-4
+    .single-tem
+       +photo(call)
+       h4= nombre
+       p= ocupacion
+       a(href="#").fa.fa-twitter.fa-stack.media-social
+       a(href="#").fa.fa-facebook.fa-stack.media-social
+       a(href="#").fa.fa-linkedin.fa-stack.media-social
+
+mixin imgleft(call)
+   case call
+       when 'first'
+           img(src="img/about/1.jpg")
+       when 'second'
+           img(src="img/about/3.jpg")
+mixin textoleft(fecha, tittleabout, call)
+  .row 
+    .col-md-5
+      h4.text-right= fecha
+      h4.text-right= tittleabout
+      p.text-right= parrafo
+    .col-md-2
+      +imgleft(call)
+
+
+mixin imgright(call)
+   case call
+       when 'first'
+           img(src="img/about/2.jpg")
+       when 'second'
+           img(src="img/about/4.jpg")
+mixin textoright(call, fecha, tittleabout)
+  .row 
+    .col-md-offset-5.col-md-2
+      +imgright(call)
+    .col-md-5
+      .textright
+        h4.text-left= fecha
+        h4.text-left= tittleabout
+        p.text-left= parrafo
+    
